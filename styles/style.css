@@ -1,0 +1,584 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f2f2f3;
+}
+.container{
+    padding-top: 4rem;
+}
+
+.container > nav {
+    position: fixed; /* Fix the nav at the top */
+    top: 2rem;
+    left: 25%;
+    width: 50%;
+    background-color: white; /* Match your nav background color */
+    z-index: 1000; /* Ensure the nav stays above other content */
+    transition: transform 0.3s ease; /* Smooth transition for hiding/showing */
+    border-radius: 2rem;
+}
+  
+
+/* .container > nav{
+    width: 40%;
+    margin: auto;
+} */
+
+.container > nav > ul{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    background-color: white;
+    list-style: none;
+    border-radius: 2rem;
+    place-items: center;
+    position: relative;
+}
+
+.container > nav > ul > li >a{
+text-decoration: none;
+color: rgb(93, 15, 54);
+font-size: 1.5rem;
+
+}
+.nav-logo {
+    display: none; /* Hide by default */
+  }
+  
+  
+  /* Hamburger Menu (hidden on desktop, visible on small screens) */
+  .hamburger {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #5D0F36;
+    margin: 4px 0;
+  }
+  
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Show logo and hamburger on small screens */
+    .container > nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem;
+       border-radius: 0;
+    }
+    .nav-logo,
+    .hamburger {
+      display: flex;
+      
+    }
+  
+    /* Hide navigation links by default on small screens */
+    #nav-menu {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%; /* Position below the nav */
+      left: 0;
+      width: 100%;
+      background-color: white;
+      padding: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 0;
+    }
+  
+    /* Show navigation links when active */
+    #nav-menu.active {
+      display: flex;
+    }
+  }  
+
+
+
+
+/* services section */
+
+
+/* /Quick service */
+.services{
+    width: 70%;
+    margin: auto;
+    margin-top: 5rem;
+    padding-top: 2rem;
+}
+
+
+.services > .quick-service > .description{
+    text-align: center;
+    position: relative;
+}
+
+.services > .quick-service > .description > .left-star{
+    position: absolute;
+    top:10px;
+    left: 10px;
+    width: 2.5rem;
+}
+
+.services > .quick-service > .description > .right-star{
+    position: absolute;
+    width: 2.5rem;
+    bottom: 10px;
+    right: 10px;
+}
+
+.services > .quick-service > .description > :nth-child(2){
+    font-size: 5rem;
+}
+.services > .quick-service > .description > :nth-child(3){
+    font-size: 2.5rem;
+}
+
+.services > .quick-service > .description > :nth-child(3) > span{
+    color: #FF2E6D  ;
+}
+.services > .quick-service > .description > p{
+    font-size: 1.2rem;
+    padding: 1rem 0rem;
+    width: 35%;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .services{
+        width: 100%;
+    }
+    .services > .quick-service > .description > :nth-child(2){
+        font-size: 3rem;
+    }
+    .services > .quick-service > .description > :nth-child(3){
+        font-size: 1rem;
+    }
+    .services > .quick-service > .description > p{
+        font-size: 1.2rem;
+        padding: 1rem 0rem;
+        width: 60%;
+        margin: auto;
+    }
+}
+
+/* Quick service end */
+
+
+/* app download-links */
+
+.app-download-links{
+    width: 40%;
+    margin: auto;
+    display: flex; 
+    gap: 1rem; 
+    margin-top: 1rem;
+    position: relative;
+    padding: 2rem 1rem;
+}
+.app-download-links > div{
+    background-color: #000;
+    display: flex;
+    place-items: center;
+    padding: 0rem 1rem;
+    border-radius: 1rem;
+}
+.app-download-links > img{
+    width: 20px;
+    position: absolute;
+    top: 1rem;
+    left: 0px;    
+}
+@media (max-width: 768px) {
+    .app-download-links{
+        width: 100%;
+    }   
+}
+
+
+/* app-download-links-end */
+
+
+/* task-start */
+
+
+.tasks {
+    position: relative;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.tasks > .top {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    min-height: 300px;
+    /* margin-top: 1rem; */
+}
+
+.tasks > .top > .left-img, 
+.tasks > .top > .right-img {
+    position: absolute;
+    top: 50%;  /* Moves the images halfway into bottom */
+    transform: translateY(-43%);
+    max-width: 400px;  /* Adjust image size */
+    z-index: 1  ;
+}
+
+.tasks > .top > .left-img {
+    left: 5%;
+}
+
+.tasks > .top > .right-img {
+    right: 10%;
+}
+.mobile-top{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-top{
+        display: block;
+    }   
+    .tasks > .top  {
+        display: none;
+    }   
+}
+
+
+.tasks > .bottom {
+    background-color: #5D0F36;
+    color: white;
+    text-align: center;
+    position: relative;
+    padding-top: 180px;  /* Reserve space for absolute image */
+    padding-bottom: 400px;
+    color: #fff;
+}
+.tasks > .bottom > h1{
+    font-size: 4rem;
+}
+
+/* Absolute positioning for the phone image */
+.tasks > .bottom > img {
+    position: absolute;
+    top: -300px; /* Moves it upward to overlap */
+    left: 38%;
+    transform: translateX(-50%);
+    max-width: 350px; /* Adjust size as needed */
+    z-index: 2;
+}
+
+
+@media (max-width: 768px) {
+    .tasks > .bottom > img {
+       display: none;
+    }
+
+}
+
+
+.pink-color{
+    color: #FF2E6D;
+}
+
+.carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .carousel {
+    margin-top: 5rem;
+    display: flex;
+    gap: 4rem; 
+    transition: transform 0.5s ease; 
+  }
+  
+  .card {
+    width: 15%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0; 
+    border: 1px solid #000;
+    gap: 20px;
+    color: rgb(121, 121, 224);
+    border-radius: 1rem;
+  }
+  .card img{
+    width: 100%;
+    border-radius: 1rem;
+}
+  
+  
+  @media (max-width: 768px) {
+    .card {
+        width: 35%;
+        border-radius: 1rem;
+      }
+      .card img{
+        border-radius: 1rem;
+      }
+      .carousel {
+        gap: 2rem; 
+        
+      }
+      .tasks > .bottom > h1{
+        font-size: 2rem;
+    }
+    .tasks > .bottom{
+        margin-bottom: 100px;
+    }
+}
+
+/* taskend */
+
+
+
+/* how snabbit works */
+/* how snabbit works */
+/* how snabbit works */
+.how-snabbit-works {
+    width: 60%; /* Adjust width as needed */
+    margin: auto;
+    /* position: relative; */
+    /* min-height: 50vh; Ensure the container has enough height for sticky effect */
+    position: relative;
+    top: 100px;
+}
+
+.how-snabbit-works h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 10px; 
+    /* z-index: 10; Ensure the heading stays above the cards */
+    padding: 20px 0; /* Add padding for better spacing */
+    font-size: 4rem;
+}
+.how-snabbit-works h1 span{
+    color: #FF2E6D;
+}
+
+.how-snabbit-works .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Adds space between cards */
+    margin-top: 100px;
+}
+
+.how-snabbit-works .card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: sticky;
+    top: 200px; /* Adjust this value to account for the heading height */
+    background-color: #fff; /* Optional: Adds a background color */
+    padding: 20px; /* Adds padding inside the card */
+    border-radius: 2rem; /* Optional: Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
+    border: none;
+    margin-bottom: 20px; /* Adds space between cards */
+    gap: 5rem;
+    
+}
+
+.how-snabbit-works .card aside {
+    flex: 1;
+}
+
+.how-snabbit-works .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional: Rounds the corners of the image */
+}
+
+.how-snabbit-works .card div {
+    flex: 2;
+    padding-left: 20px; /* Adds space between the image and text */
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.how-snabbit-works .card button {
+    background-color: #FF2E6D; /* Example button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width: 15%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.how-snabbit-works .card > div > :nth-child(2){
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5D0F36;
+}
+.how-snabbit-works .card > div > :nth-child(3){
+    font-size: 1.2rem;
+    color: #7E4361;
+
+}
+
+
+@media (max-width: 767px) {
+    .how-snabbit-works h1 {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .how-snabbit-works .card {
+        padding: 15px; /* Reduce padding for mobile */
+        flex-direction: column;
+    }
+
+    .card button {
+        font-size: 0.9rem; /* Smaller button text for mobile */
+    }
+
+    .card > div > :nth-child(2) {
+        font-size: 1.2rem; /* Smaller heading for mobile */
+    }
+
+    .card > div > :nth-child(3) {
+        font-size: 1rem; /* Smaller paragraph text for mobile */
+    }
+    .how-snabbit-works .card button {
+    width: 100%; 
+    }
+    .how-snabbit-works .card aside{
+        width: 100%;
+    }
+    .how-snabbit-works .card aside img{
+        width: 100%;
+    }
+}
+
+
+/* why choose snabbit */
+.why-choose-snabbit {
+    width: 80%;
+    padding: 50px 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    margin: auto;
+    margin-top: 5rem;
+    text-align: center;
+    padding: 5rem;
+  }
+
+  .why-choose-snabbit > h1{
+    width: 100%;
+    margin-bottom: 4rem;
+    font-size: 4rem;
+  }
+  .why-choose-snabbit > h1 span{
+    color: #FF2E6D;
+  }
+  
+  .why-choose-snabbit .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+    gap: 3rem;
+    row-gap: 15rem;
+    width: 100%;
+    margin: auto;
+    position: relative;
+  }
+  
+  .why-choose-snabbit .card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: transform 0.7s ease-in-out, opacity 1.5s ease-in-out;
+    padding: 0;
+    border: none;
+    color: black;
+    border-radius: 2rem;
+    
+  }
+  .why-choose-snabbit .card img{
+    width: 100%;
+    max-height: 200px;
+  }
+  
+  /* Random Initial Placement (Scattered) */
+  .why-choose-snabbit .card:nth-child(1) { transform: rotate(15deg) translate(150px, 100px); }
+  .why-choose-snabbit .card:nth-child(2) { transform: rotate(-10deg) translate(0px, 100px); }
+  .why-choose-snabbit .card:nth-child(3) { transform: rotate(20deg) translate(-100px, 200px); }
+  .why-choose-snabbit .card:nth-child(4) { transform: rotate(-50deg) translate(150px, 100px); }
+  .why-choose-snabbit .card:nth-child(5) { transform: rotate(8deg) translate(0px, 0px); }
+  .why-choose-snabbit .card:nth-child(6) { transform: rotate(-12deg) translate(-100px, 0px); }
+  
+  /* Arrange into Grid when Section Becomes Visible */
+  .why-choose-snabbit .card.arrange {
+    opacity: 1;
+    transform: rotate(0) translate(0, 0);
+  }
+  /* Moves h1 to the middle of the two rows when arranged */
+  .why-choose-snabbit h1 {
+    position: absolute;
+    top: 5%; /* Start from the top */
+    left: 50%;
+    transform: translate(-50%, 0);
+    transition: top 0.7s ease-in-out;
+  }
+  
+  /* Moves h1 to the middle of the two rows smoothly */
+  .why-choose-snabbit.arranged h1 {
+    top: 50%; /* Moves down smoothly */
+    transform: translate(-50%, -50%);
+  }
+
+  @media (max-width: 768px) {
+    .why-choose-snabbit{
+        width: 100%;
+    }
+    .why-choose-snabbit h1 {
+      position: relative; /* Static positioning */
+      top: auto;
+      left: auto;
+      transform: none !important;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 2rem; /* Space before grid */
+      font-size: 1.5rem;
+    }
+  
+    .why-choose-snabbit .card-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+      gap: 1.5rem;
+      justify-content: center;
+    }
+  
+    .why-choose-snabbit .card {
+      transform: none !important; /* Remove animation */
+      opacity: 1 !important;
+      transition: none !important;
+    }
+  }
+  
+  
+  
