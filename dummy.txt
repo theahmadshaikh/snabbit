@@ -1,0 +1,27 @@
+<section class="splide do-not-take-words" aria-label="Splide Basic HTML Example">
+                <div class="splide__track">
+                      <ul class="splide__list">
+                          <li class="splide__slide">
+                            <div>
+                                <!-- <img src="https://dummyimage.com/600x400/000/fff.png" alt=""> -->
+                                <p>I recently started using Snabbit for weekly cleaning and I' m extremely impressed. They deliver quality services quickly at pocket-friendly rates. I now rely on them for weekly cleanings instead of a deep clean every 3 months.</p>
+                            </div>
+                          </li>
+                          <li class="splide__slide">
+                            <div>
+                                <p>I recently started using Snabbit for weekly cleaning and I' m extremely impressed. They deliver quality services quickly at pocket-friendly rates. I now rely on them for weekly cleanings instead of a deep clean every 3 months.</p>
+                            </div>
+                          </li>
+                          <li class="splide__slide">
+                            <div>
+                                <p>I recently started using Snabbit for weekly cleaning and I' m extremely impressed. They deliver quality services quickly at pocket-friendly rates. I now rely on them for weekly cleanings instead of a deep clean every 3 months.</p>
+                            </div>
+                          </li>
+                          <li class="splide__slide">
+                            <div>
+                                <p>I recently started using Snabbit for weekly cleaning and I' m extremely impressed. They deliver quality services quickly at pocket-friendly rates. I now rely on them for weekly cleanings instead of a deep clean every 3 months.</p>
+                            </div>
+                          </li>
+                      </ul>
+                </div>
+              </section>

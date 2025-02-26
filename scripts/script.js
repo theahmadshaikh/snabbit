@@ -103,23 +103,7 @@ function toggleNav() {
 
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const section = document.querySelector(".why-choose-snabbit");
-//   const cards = document.querySelectorAll(".why-choose-snabbit .card");
 
-//   const observer = new IntersectionObserver(
-//     ([entry]) => {
-//       if (entry.isIntersecting) {
-//         cards.forEach((card) => card.classList.add("arrange")); // Show grid
-//       } else {
-//         cards.forEach((card) => card.classList.remove("arrange")); // Scatter when out of view
-//       }
-//     },
-//     { threshold: 0.8 } // Trigger when 30% of section is visible
-//   );
-
-//   observer.observe(section);
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
   const section = document.querySelector(".why-choose-snabbit");
@@ -135,10 +119,18 @@ document.addEventListener("DOMContentLoaded", function () {
         cards.forEach(card => card.classList.remove("arrange")); // Scatter back
       }
     },
-    { threshold: 0.8 }
+    { threshold: 0.6 }
   );
 
   observer.observe(section);
 });
 
+
+
+document.querySelectorAll('.faq-question').forEach((question) => {
+  question.addEventListener('click', () => {
+    const faqItem = question.parentElement;
+    faqItem.classList.toggle('active');
+  });
+});
 
